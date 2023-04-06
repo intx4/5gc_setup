@@ -4,11 +4,11 @@ cd ~
 git clone https://github.com/aligungr/UERANSIM
 
 sudo apt update -y && sudo apt upgrade -y
-sudo apt install make
-sudo apt install gcc
-sudo apt install g++
-sudo apt install libsctp-dev lksctp-tools
-sudo apt install iproute2
-sudo snap install cmake --classic
+sudo apt install -y make
+sudo apt install -y gcc
+sudo apt install -y g++
+sudo apt install -y libsctp-dev lksctp-tools
+sudo apt install -y iproute2
+sudo snap install -y cmake --classic
 cd UERANSIM
 make
