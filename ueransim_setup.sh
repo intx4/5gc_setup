@@ -9,6 +9,6 @@ sudo apt install -y gcc
 sudo apt install -y g++
 sudo apt install -y libsctp-dev lksctp-tools
 sudo apt install -y iproute2
-sudo snap install -y cmake --classic
+sudo snap install cmake --classic
 cd UERANSIM
 make
