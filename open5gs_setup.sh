@@ -23,12 +23,13 @@ ninja install
 
 # WEBUI
 sudo apt install -y curl
-curl -fsSL https://deb.nodesource.com/setup_19.x | sudo -E bash -
+curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
 sudo apt-get update
 sudo apt install -y nodejs
 cd ~/open5gs/webui
-npm ci --no-optional
-cd ~/open5gs
+npm ci
+echo "Modify the package.json file:" 
+echo "$ sed -i '' 's/"scripts": {/"scripts": {\n\t"dev": "webpack-dev-server --host=YOUR_IP_ADDRESS --port=YOUR_PORT",/' package.json"
 
 # TUN
 sudo ip tuntap add name ogstun mode tun && \
